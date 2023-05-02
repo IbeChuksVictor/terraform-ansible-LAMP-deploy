@@ -1,0 +1,8 @@
+---
+- name: Configuration of a LAMP Web Stack.
+  hosts: LAMP_servers
+  pre_tasks: 
+    apt:
+      name: Update and upgrade repositories cache
+      update_cache: yes
+      upgrade: yes
