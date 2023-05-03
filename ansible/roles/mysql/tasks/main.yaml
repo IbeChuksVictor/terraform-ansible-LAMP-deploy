@@ -1,0 +1,4 @@
+- include: create_mysql_db_user.yaml
+- include: create_mysql_db.yaml
+- include: mysql_db_secure_installation.yaml
+

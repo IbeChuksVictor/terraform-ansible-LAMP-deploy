@@ -1,0 +1,8 @@
+- name: Install git and python.
+  apt:
+    name:
+      - git
+      - python3
+    state: present
+  tags: basic
+
