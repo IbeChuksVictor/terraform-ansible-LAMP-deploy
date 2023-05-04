@@ -9,10 +9,10 @@
 
   roles:
     - name: Install Basic Packages.
-      role: basic
+      role: 001-basic-dependencies
     - name: Install and configure Apache.
-      role: apache
+      role: 002-apache
     - name: Install and configure a Database.
-      role: mysql
+      role: 003-mysql
     - name: Install PHP and its dependencies.
-      role: php
+      role: 004-php
