@@ -1,18 +1,18 @@
 ---
-- name: Index Repositories update and upgrade
+- name: index repositories update and upgrade
   hosts: all
   pre_tasks: 
     apt:
-      name: Update and upgrade Index Repositories
+      name: update and upgrade index repositories
       update_cache: yes
       upgrade: dist
 
   roles:
-    - name: Install Basic Packages.
+    - name: install basic packages.
       role: 001-basic-dependencies
-    - name: Install and configure Apache.
+    - name: install and configure apache.
       role: 002-apache
-    - name: Install and configure a Database.
+    - name: install and configure a database.
       role: 003-mysql
-    - name: Install PHP and its dependencies.
+    - name: install php and its dependencies.
       role: 004-php
