@@ -2,5 +2,9 @@
   apt:
     name: mysql-server
     state: present
+  notify:
+    - start mysql
   tags: mysql
+
+
     
