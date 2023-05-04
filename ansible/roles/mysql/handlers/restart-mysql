@@ -2,3 +2,4 @@
   service:
     name: mysql
     state: restarted
+  tags: mysql
