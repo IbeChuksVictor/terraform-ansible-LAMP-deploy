@@ -1,0 +1,5 @@
+- name: install apache web server
+  apt:
+    name: apache2
+    state: present
+  notify: start apache

@@ -3,6 +3,7 @@
     name:
       - git
       - python3
+      - ufw
     state: present
   tags: basic
 
