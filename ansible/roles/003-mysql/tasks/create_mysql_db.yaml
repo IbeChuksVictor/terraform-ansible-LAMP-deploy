@@ -1,4 +1,13 @@
-- name: create mysql database
-  mysql_db: 
-    name: "{{ mysql_db_name }}"
-    state: present
+- name: Remove test database
+  mysql_db:
+    name: test
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- name: Reload privileges
+  mysql_db:
+    name: "*.*"
+    state: flush_privs
+    login_user: root
+    login_password: "{{ mysql_root_password }}"

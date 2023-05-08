@@ -1,6 +1,16 @@
-- name: create database user
+- name: secure mysql installation
   mysql_user:
-    name: "{{ mysql_db_user }}"
-    password: "{{ mysql_db_password }}"
-    priv: "{{ mysql_db_name }}.*:ALL"
-    state: present
+    name: root
+    password: "{{ mysql_root_password }}"
+    login_user: root
+    login_password: ""
+    host_all: yes
+    check_implicit_admin: yes
+
+- name: remove anonymous user
+  mysql_user:
+    name: ""
+    host_all: yes
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"

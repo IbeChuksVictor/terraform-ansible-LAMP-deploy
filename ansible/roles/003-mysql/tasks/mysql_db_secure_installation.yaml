@@ -5,6 +5,3 @@
   notify:
     - start mysql
   tags: mysql
-
-
-    

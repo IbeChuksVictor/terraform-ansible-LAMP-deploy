@@ -1,2 +1,3 @@
 - include: start-mysql.yaml
 - include: restart-mysql.yaml
+- include: reload-mysql.yaml
